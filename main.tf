@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "myresourcegroup" {
 module "web_app_container" {
    source = "app.terraform.io/t929658/web-app-container/azurerm"
    version = "2.2.1" 
-   name = "${var.prefix}-web_app"
+   name = "${var.prefix}-webApp"
    port = "80"
    https_only = "false"
    resource_group_name = "${azurerm_resource_group.myresourcegroup.name}"
